@@ -22,4 +22,7 @@ terraform.rc
 keys/
 
 # ignore docker-compose cache
-module_1/ny_taxi_postgres_data/
+/module_1/ny_taxi_postgres_data/
+
+# ignore data files
+/module_1/data/
