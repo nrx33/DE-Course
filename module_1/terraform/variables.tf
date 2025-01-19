@@ -25,7 +25,7 @@ variable "gcp_bucket_class" {
 
 variable "gcp_region" {
   description = "region of the project"
-  default     = "asia-southeast1"
+  default     = "asia"
 }
 
 variable "gcp_credentials" {
