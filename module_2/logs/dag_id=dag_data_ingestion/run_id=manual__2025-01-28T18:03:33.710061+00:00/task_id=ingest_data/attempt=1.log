@@ -1,0 +1,37 @@
+[2025-01-28T18:03:39.042+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T18:03:39.059+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T18:03:33.710061+00:00 [queued]>
+[2025-01-28T18:03:39.066+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T18:03:33.710061+00:00 [queued]>
+[2025-01-28T18:03:39.067+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-28T18:03:39.078+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): ingest_data> on 2025-01-28 18:03:33.710061+00:00
+[2025-01-28T18:03:39.086+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_data_ingestion', 'ingest_data', 'manual__2025-01-28T18:03:33.710061+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/local_ingestion_dag.py', '--cfg-path', '/tmp/tmpo6ecu7p7']
+[2025-01-28T18:03:39.088+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask ingest_data
+[2025-01-28T18:03:39.089+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=181) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T18:03:39.089+0000] {standard_task_runner.py:72} INFO - Started process 183 to run task
+[2025-01-28T18:03:39.128+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T18:03:33.710061+00:00 [running]> on host 6a79f74e3845
+[2025-01-28T18:03:39.206+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T18:03:33.710061+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T18:03:33.710061+00:00'
+[2025-01-28T18:03:39.207+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T18:03:39.217+0000] {logging_mixin.py:190} INFO - Table Name: trip_data
+[2025-01-28T18:03:39.218+0000] {logging_mixin.py:190} INFO - File Path (Parquet): /opt/***/data/yellow_2021-01_data.parquet
+[2025-01-28T18:03:39.218+0000] {logging_mixin.py:190} INFO - Execution Date: 2025-01-28 18:03:33.710061+00:00
+[2025-01-28T18:03:39.226+0000] {logging_mixin.py:190} INFO - Connection established successfully, inserting data...
+[2025-01-28T18:03:48.748+0000] {logging_mixin.py:190} INFO - Inserted the first chunk, took 9.514 second(s).
+[2025-01-28T18:03:57.729+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.981 second(s).
+[2025-01-28T18:04:07.877+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 10.148 second(s).
+[2025-01-28T18:04:17.469+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 9.591 second(s).
+[2025-01-28T18:04:27.470+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 10.000 second(s).
+[2025-01-28T18:04:37.794+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 10.323 second(s).
+[2025-01-28T18:04:47.567+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 9.773 second(s).
+[2025-01-28T18:04:56.954+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 9.387 second(s).
+[2025-01-28T18:05:05.910+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.955 second(s).
+[2025-01-28T18:05:14.702+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.791 second(s).
+[2025-01-28T18:05:23.238+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.536 second(s).
+[2025-01-28T18:05:31.632+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.393 second(s).
+[2025-01-28T18:05:39.434+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 7.802 second(s).
+[2025-01-28T18:05:44.588+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 5.153 second(s).
+[2025-01-28T18:05:44.589+0000] {logging_mixin.py:190} INFO - All batches inserted, ingestion completed.
+[2025-01-28T18:05:44.589+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-28T18:05:44.600+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T18:05:44.600+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_data_ingestion, task_id=ingest_data, run_id=manual__2025-01-28T18:03:33.710061+00:00, execution_date=20250128T180333, start_date=20250128T180339, end_date=20250128T180544
+[2025-01-28T18:05:44.682+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-28T18:05:44.695+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T18:05:44.696+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

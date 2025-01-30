@@ -1,0 +1,19 @@
+[2025-01-30T10:36:57.642+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T10:36:57.687+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fhv_to_gcp_dag.upload_to_cloud scheduled__2020-07-02T00:00:00+00:00 [queued]>
+[2025-01-30T10:36:57.720+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fhv_to_gcp_dag.upload_to_cloud scheduled__2020-07-02T00:00:00+00:00 [queued]>
+[2025-01-30T10:36:57.721+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-01-30T10:36:57.824+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): upload_to_cloud> on 2020-07-02 00:00:00+00:00
+[2025-01-30T10:36:57.871+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fhv_to_gcp_dag', 'upload_to_cloud', 'scheduled__2020-07-02T00:00:00+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/homework_fhv_dag.py', '--cfg-path', '/tmp/tmpq8eo7a6_']
+[2025-01-30T10:36:57.883+0000] {standard_task_runner.py:105} INFO - Job 146: Subtask upload_to_cloud
+[2025-01-30T10:36:57.889+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1045) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-30T10:36:57.890+0000] {standard_task_runner.py:72} INFO - Started process 1061 to run task
+[2025-01-30T10:36:58.134+0000] {task_command.py:467} INFO - Running <TaskInstance: fhv_to_gcp_dag.upload_to_cloud scheduled__2020-07-02T00:00:00+00:00 [running]> on host 9573d401388f
+[2025-01-30T10:36:58.555+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fhv_to_gcp_dag' AIRFLOW_CTX_TASK_ID='upload_to_cloud' AIRFLOW_CTX_EXECUTION_DATE='2020-07-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-07-02T00:00:00+00:00'
+[2025-01-30T10:36:58.560+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T10:37:00.794+0000] {logging_mixin.py:190} INFO - The file /opt/***/data/fhv_2020-07_data.parquet has been uploaded to nrabbi-33-dtc-de-data-bucket/<Blob: nrabbi-33-dtc-de-data-bucket, data/fhv_2020-07_data.parquet, 1738233420830115>
+[2025-01-30T10:37:00.794+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-30T10:37:00.818+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T10:37:00.818+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fhv_to_gcp_dag, task_id=upload_to_cloud, run_id=scheduled__2020-07-02T00:00:00+00:00, execution_date=20200702T000000, start_date=20250130T103657, end_date=20250130T103700
+[2025-01-30T10:37:00.873+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T10:37:00.893+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T10:37:00.894+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,94 @@
+[2025-01-28T11:14:03.881+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T11:14:03.902+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_ingestion.get_data manual__2025-01-28T11:14:03.364835+00:00 [queued]>
+[2025-01-28T11:14:03.911+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_ingestion.get_data manual__2025-01-28T11:14:03.364835+00:00 [queued]>
+[2025-01-28T11:14:03.911+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-28T11:14:03.924+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): get_data> on 2025-01-28 11:14:03.364835+00:00
+[2025-01-28T11:14:03.933+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_data_ingestion', 'get_data', 'manual__2025-01-28T11:14:03.364835+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/dag_data_ingestion.py', '--cfg-path', '/tmp/tmp8tb08yt6']
+[2025-01-28T11:14:03.935+0000] {standard_task_runner.py:105} INFO - Job 80: Subtask get_data
+[2025-01-28T11:14:03.938+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=514) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T11:14:03.939+0000] {standard_task_runner.py:72} INFO - Started process 515 to run task
+[2025-01-28T11:14:03.974+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_data_ingestion.get_data manual__2025-01-28T11:14:03.364835+00:00 [running]> on host a92704734cc8
+[2025-01-28T11:14:04.051+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_ingestion' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T11:14:03.364835+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T11:14:03.364835+00:00'
+[2025-01-28T11:14:04.052+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T11:14:04.065+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-28T11:14:04.066+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -o /opt/***/data/yellow_2022_01_data.parquet https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2022-01.parquet']
+[2025-01-28T11:14:04.076+0000] {subprocess.py:99} INFO - Output:
+[2025-01-28T11:14:04.165+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-01-28T11:14:04.165+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-01-28T11:14:04.519+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0Warning: Failed to open the file
+[2025-01-28T11:14:04.519+0000] {subprocess.py:106} INFO - Warning: /opt/***/data/yellow_2022_01_data.parquet: No such file or
+[2025-01-28T11:14:04.519+0000] {subprocess.py:106} INFO - Warning: directory
+[2025-01-28T11:14:04.520+0000] {subprocess.py:106} INFO -   0 36.3M    0 16026    0     0  45223      0  0:14:03 --:--:--  0:14:03 45271
+[2025-01-28T11:14:04.520+0000] {subprocess.py:106} INFO - curl: (23) Failure writing output to destination
+[2025-01-28T11:14:04.523+0000] {subprocess.py:110} INFO - Command exited with return code 23
+[2025-01-28T11:14:04.533+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 23.
+[2025-01-28T11:14:04.539+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dag_data_ingestion, task_id=get_data, run_id=manual__2025-01-28T11:14:03.364835+00:00, execution_date=20250128T111403, start_date=20250128T111403, end_date=20250128T111404
+[2025-01-28T11:14:04.549+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T11:14:04.549+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 80 for task get_data (Bash command failed. The command returned a non-zero exit code 23.; 515)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 23.
+[2025-01-28T11:14:04.594+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-28T11:14:04.612+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T11:14:04.615+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

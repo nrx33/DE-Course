@@ -1,0 +1,234 @@
+[2025-01-28T18:09:12.807+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T18:09:12.820+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T18:09:06.953628+00:00 [queued]>
+[2025-01-28T18:09:12.825+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T18:09:06.953628+00:00 [queued]>
+[2025-01-28T18:09:12.825+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-28T18:09:12.834+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): ingest_data> on 2025-01-28 18:09:06.953628+00:00
+[2025-01-28T18:09:12.842+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_data_ingestion', 'ingest_data', 'manual__2025-01-28T18:09:06.953628+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/local_ingestion_dag.py', '--cfg-path', '/tmp/tmp2uz1pgga']
+[2025-01-28T18:09:12.844+0000] {standard_task_runner.py:105} INFO - Job 19: Subtask ingest_data
+[2025-01-28T18:09:12.844+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=206) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T18:09:12.845+0000] {standard_task_runner.py:72} INFO - Started process 208 to run task
+[2025-01-28T18:09:12.879+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T18:09:06.953628+00:00 [running]> on host b06ec952d9d1
+[2025-01-28T18:09:12.948+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T18:09:06.953628+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T18:09:06.953628+00:00'
+[2025-01-28T18:09:12.948+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T18:09:12.958+0000] {logging_mixin.py:190} INFO - Table Name: trip_data
+[2025-01-28T18:09:12.958+0000] {logging_mixin.py:190} INFO - File Path (Parquet): /opt/***/data/yellow_2023-01_data.parquet
+[2025-01-28T18:09:12.958+0000] {logging_mixin.py:190} INFO - Execution Date: 2025-01-28 18:09:06.953628+00:00
+[2025-01-28T18:09:12.965+0000] {logging_mixin.py:190} INFO - Connection established successfully, inserting data...
+[2025-01-28T18:09:21.273+0000] {logging_mixin.py:190} INFO - Inserted the first chunk, took 8.307 second(s).
+[2025-01-28T18:09:29.479+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.205 second(s).
+[2025-01-28T18:09:37.859+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.379 second(s).
+[2025-01-28T18:09:46.016+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.157 second(s).
+[2025-01-28T18:09:54.857+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.841 second(s).
+[2025-01-28T18:10:04.053+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 9.196 second(s).
+[2025-01-28T18:10:12.558+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.504 second(s).
+[2025-01-28T18:10:22.114+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 9.556 second(s).
+[2025-01-28T18:10:30.138+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.024 second(s).
+[2025-01-28T18:10:38.332+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.193 second(s).
+[2025-01-28T18:10:46.716+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.384 second(s).
+[2025-01-28T18:10:54.756+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.039 second(s).
+[2025-01-28T18:11:02.668+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 7.912 second(s).
+[2025-01-28T18:11:10.810+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.142 second(s).
+[2025-01-28T18:11:18.774+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 7.963 second(s).
+[2025-01-28T18:11:27.472+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.698 second(s).
+[2025-01-28T18:11:35.429+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 7.957 second(s).
+[2025-01-28T18:11:43.497+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.068 second(s).
+[2025-01-28T18:11:51.317+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 7.820 second(s).
+[2025-01-28T18:12:00.392+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 9.074 second(s).
+[2025-01-28T18:12:08.896+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.503 second(s).
+[2025-01-28T18:12:17.460+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.564 second(s).
+[2025-01-28T18:12:25.976+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.515 second(s).
+[2025-01-28T18:12:34.472+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.496 second(s).
+[2025-01-28T18:12:42.498+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.025 second(s).
+[2025-01-28T18:12:50.716+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.218 second(s).
+[2025-01-28T18:12:59.565+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.848 second(s).
+[2025-01-28T18:13:07.671+0000] {logging_mixin.py:190} INFO - Inserted another chunk, took 8.105 second(s).
+[2025-01-28T18:13:10.912+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-01-28T18:13:10.913+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-28T18:13:10.915+0000] {process_utils.py:132} INFO - Sending 15 to group 208. PIDs of all processes in the group: [208]
+[2025-01-28T18:13:10.915+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 208
+[2025-01-28T18:13:10.933+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-28T18:13:10.933+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ingest_script.py", line 44, in ingest_callable
+    df.to_sql(name=table_name, con=engine, if_exists='append')
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 3008, in to_sql
+    return sql.to_sql(
+           ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 787, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 1585, in __exit__
+    self.exit_stack.close()
+  File "/usr/local/lib/python3.12/contextlib.py", line 618, in close
+    self.__exit__(None, None, None)
+  File "/usr/local/lib/python3.12/contextlib.py", line 610, in __exit__
+    raise exc_details[1]
+  File "/usr/local/lib/python3.12/contextlib.py", line 595, in __exit__
+    if cb(*exc_details):
+       ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/util.py", line 235, in __exit__
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/util.py", line 233, in __exit__
+    self.commit()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2469, in commit
+    self._do_commit()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2659, in _do_commit
+    self._connection_commit_impl()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2630, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1096, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2138, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1094, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+                                  ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 537, in connection
+    return self._revalidate_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 650, in _revalidate_connection
+    self._invalid_transaction()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 622, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: https://sqlalche.me/e/14/8s2b)
+[2025-01-28T18:13:10.955+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_data_ingestion, task_id=ingest_data, run_id=manual__2025-01-28T18:09:06.953628+00:00, execution_date=20250128T180906, start_date=20250128T180912, end_date=20250128T181310
+[2025-01-28T18:13:10.971+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T18:13:10.971+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 19 for task ingest_data (Can't reconnect until invalid transaction is rolled back. (Background on this error at: https://sqlalche.me/e/14/8s2b); 208)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ingest_script.py", line 44, in ingest_callable
+    df.to_sql(name=table_name, con=engine, if_exists='append')
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 3008, in to_sql
+    return sql.to_sql(
+           ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 787, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 1585, in __exit__
+    self.exit_stack.close()
+  File "/usr/local/lib/python3.12/contextlib.py", line 618, in close
+    self.__exit__(None, None, None)
+  File "/usr/local/lib/python3.12/contextlib.py", line 610, in __exit__
+    raise exc_details[1]
+  File "/usr/local/lib/python3.12/contextlib.py", line 595, in __exit__
+    if cb(*exc_details):
+       ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/util.py", line 235, in __exit__
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/util.py", line 233, in __exit__
+    self.commit()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2469, in commit
+    self._do_commit()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2659, in _do_commit
+    self._connection_commit_impl()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2630, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1096, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2138, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1094, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+                                  ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 537, in connection
+    return self._revalidate_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 650, in _revalidate_connection
+    self._invalid_transaction()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 622, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: https://sqlalche.me/e/14/8s2b)
+[2025-01-28T18:13:11.047+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=208, status='terminated', exitcode=1, started='18:09:12') (208) terminated with exit code 1

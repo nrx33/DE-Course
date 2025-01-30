@@ -1,0 +1,24 @@
+[2025-01-30T10:25:56.756+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T10:25:56.781+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fhv_to_gcp_dag.download_fhv scheduled__2020-06-02T00:00:00+00:00 [queued]>
+[2025-01-30T10:25:56.791+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fhv_to_gcp_dag.download_fhv scheduled__2020-06-02T00:00:00+00:00 [queued]>
+[2025-01-30T10:25:56.792+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T10:25:56.826+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): download_fhv> on 2020-06-02 00:00:00+00:00
+[2025-01-30T10:25:56.850+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=359) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-30T10:25:56.854+0000] {standard_task_runner.py:72} INFO - Started process 365 to run task
+[2025-01-30T10:25:56.857+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fhv_to_gcp_dag', 'download_fhv', 'scheduled__2020-06-02T00:00:00+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/homework_fhv_dag.py', '--cfg-path', '/tmp/tmpvq9c4mux']
+[2025-01-30T10:25:56.860+0000] {standard_task_runner.py:105} INFO - Job 84: Subtask download_fhv
+[2025-01-30T10:25:56.945+0000] {task_command.py:467} INFO - Running <TaskInstance: fhv_to_gcp_dag.download_fhv scheduled__2020-06-02T00:00:00+00:00 [running]> on host 9573d401388f
+[2025-01-30T10:25:57.181+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fhv_to_gcp_dag' AIRFLOW_CTX_TASK_ID='download_fhv' AIRFLOW_CTX_EXECUTION_DATE='2020-06-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-06-02T00:00:00+00:00'
+[2025-01-30T10:25:57.182+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T10:25:57.445+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T10:25:57.446+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -o /opt/***/data/fhv_2020-06_data.parquet https://d37ci6vzurychx.cloudfront.net/trip-data/fhv_tripdata_2020-06.parquet']
+[2025-01-30T10:25:57.470+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T10:25:57.483+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-01-30T10:25:57.485+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-01-30T10:25:59.220+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 15 10.1M   15 1596k    0     0  1151k      0  0:00:09  0:00:01  0:00:08 1151k100 10.1M  100 10.1M    0     0  5988k      0  0:00:01  0:00:01 --:--:-- 5988k
+[2025-01-30T10:25:59.223+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-30T10:25:59.315+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T10:25:59.315+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fhv_to_gcp_dag, task_id=download_fhv, run_id=scheduled__2020-06-02T00:00:00+00:00, execution_date=20200602T000000, start_date=20250130T102556, end_date=20250130T102559
+[2025-01-30T10:25:59.421+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T10:25:59.474+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T10:25:59.493+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

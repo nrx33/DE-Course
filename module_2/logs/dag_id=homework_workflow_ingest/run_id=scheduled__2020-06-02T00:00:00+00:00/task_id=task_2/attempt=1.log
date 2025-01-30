@@ -1,0 +1,44 @@
+[2025-01-30T09:33:50.120+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T09:33:50.182+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework_workflow_ingest.task_2 scheduled__2020-06-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:33:50.247+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework_workflow_ingest.task_2 scheduled__2020-06-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:33:50.251+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T09:33:50.401+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_2> on 2020-06-02 00:00:00+00:00
+[2025-01-30T09:33:50.441+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=398) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-30T09:33:50.444+0000] {standard_task_runner.py:72} INFO - Started process 404 to run task
+[2025-01-30T09:33:50.433+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'homework_workflow_ingest', 'task_2', 'scheduled__2020-06-02T00:00:00+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/homework_dag.py', '--cfg-path', '/tmp/tmpgciegxxs']
+[2025-01-30T09:33:50.447+0000] {standard_task_runner.py:105} INFO - Job 77: Subtask task_2
+[2025-01-30T09:33:50.601+0000] {task_command.py:467} INFO - Running <TaskInstance: homework_workflow_ingest.task_2 scheduled__2020-06-02T00:00:00+00:00 [running]> on host 710324c6e27a
+[2025-01-30T09:33:50.899+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='homework_workflow_ingest' AIRFLOW_CTX_TASK_ID='task_2' AIRFLOW_CTX_EXECUTION_DATE='2020-06-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-06-02T00:00:00+00:00'
+[2025-01-30T09:33:50.900+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T09:33:50.925+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T09:33:50.926+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', "echo '2020-06'"]
+[2025-01-30T09:33:50.947+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T09:33:50.954+0000] {subprocess.py:106} INFO - 2020-06
+[2025-01-30T09:33:50.956+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-30T09:33:51.031+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T09:33:51.032+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=homework_workflow_ingest, task_id=task_2, run_id=scheduled__2020-06-02T00:00:00+00:00, execution_date=20200602T000000, start_date=20250130T093350, end_date=20250130T093351
+[2025-01-30T09:33:51.085+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T09:33:51.110+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T09:33:51.123+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-30T09:59:14.464+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T09:59:14.517+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework_workflow_ingest.task_2 scheduled__2020-06-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:59:14.534+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework_workflow_ingest.task_2 scheduled__2020-06-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:59:14.535+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T09:59:14.560+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_2> on 2020-06-02 00:00:00+00:00
+[2025-01-30T09:59:14.581+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=398) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-30T09:59:14.583+0000] {standard_task_runner.py:72} INFO - Started process 406 to run task
+[2025-01-30T09:59:14.586+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'homework_workflow_ingest', 'task_2', 'scheduled__2020-06-02T00:00:00+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/homework_dag.py', '--cfg-path', '/tmp/tmph7imee_2']
+[2025-01-30T09:59:14.590+0000] {standard_task_runner.py:105} INFO - Job 43: Subtask task_2
+[2025-01-30T09:59:14.804+0000] {task_command.py:467} INFO - Running <TaskInstance: homework_workflow_ingest.task_2 scheduled__2020-06-02T00:00:00+00:00 [running]> on host 713eb9fcfb63
+[2025-01-30T09:59:15.185+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='homework_workflow_ingest' AIRFLOW_CTX_TASK_ID='task_2' AIRFLOW_CTX_EXECUTION_DATE='2020-06-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-06-02T00:00:00+00:00'
+[2025-01-30T09:59:15.186+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T09:59:15.205+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T09:59:15.218+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', "echo '2020-06'"]
+[2025-01-30T09:59:15.282+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T09:59:15.288+0000] {subprocess.py:106} INFO - 2020-06
+[2025-01-30T09:59:15.292+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-30T09:59:15.354+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T09:59:15.355+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=homework_workflow_ingest, task_id=task_2, run_id=scheduled__2020-06-02T00:00:00+00:00, execution_date=20200602T000000, start_date=20250130T095914, end_date=20250130T095915
+[2025-01-30T09:59:15.426+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T09:59:15.459+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T09:59:15.461+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

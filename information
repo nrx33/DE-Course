@@ -1,6 +1,7 @@
 # connect to database using pgcli
 pgcli -h localhost -p 5432 -u root -d ny_taxi
 pgcli -h localhost -p 5433 -u postgres -d ny_taxi
+pgcli -h localhost -p 5432 -u airflow -d airflow
 
 # run docker app in the specified network
 docker run -it --network=module_1_mynetwork app:v1 \

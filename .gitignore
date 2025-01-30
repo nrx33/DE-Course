@@ -27,3 +27,8 @@ keys/
 # ignore data files
 /module_1/data/
 /module_1/homework/data
+
+# ignore 
+__pycache__
+.env
+module_2/data

@@ -1,0 +1,195 @@
+[2025-01-30T09:33:21.229+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T09:33:21.271+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:33:21.284+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:33:21.285+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T09:33:23.705+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): download_data> on 2020-03-02 00:00:00+00:00
+[2025-01-30T09:33:23.762+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'homework_workflow_ingest', 'download_data', 'scheduled__2020-03-02T00:00:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/homework_dag.py', '--cfg-path', '/tmp/tmpm3mfelvy']
+[2025-01-30T09:33:23.777+0000] {standard_task_runner.py:105} INFO - Job 50: Subtask download_data
+[2025-01-30T09:33:23.783+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=259) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-30T09:33:23.787+0000] {standard_task_runner.py:72} INFO - Started process 260 to run task
+[2025-01-30T09:33:26.759+0000] {task_command.py:467} INFO - Running <TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [running]> on host 710324c6e27a
+[2025-01-30T09:33:30.720+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='homework_workflow_ingest' AIRFLOW_CTX_TASK_ID='download_data' AIRFLOW_CTX_EXECUTION_DATE='2020-03-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-03-02T00:00:00+00:00'
+[2025-01-30T09:33:30.726+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T09:33:30.751+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T09:33:30.752+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -o /opt/***/data/yellow_2020-03_data.parquet https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-03.parquet']
+[2025-01-30T09:33:30.763+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T09:33:30.774+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-01-30T09:33:30.774+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-01-30T09:33:33.824+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  2 42.3M    2 1103k    0     0  1001k      0  0:00:43  0:00:01  0:00:42 1001k 49 42.3M   49 20.7M    0     0  9654k      0  0:00:04  0:00:02  0:00:02 9654k100 42.3M  100 42.3M    0     0  13.8M      0  0:00:03  0:00:03 --:--:-- 13.9M
+[2025-01-30T09:33:33.828+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-30T09:33:35.205+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T09:33:35.206+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=homework_workflow_ingest, task_id=download_data, run_id=scheduled__2020-03-02T00:00:00+00:00, execution_date=20200302T000000, start_date=20250130T093321, end_date=20250130T093335
+[2025-01-30T09:33:36.807+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T09:33:36.966+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T09:33:37.732+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-30T09:47:59.048+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T09:47:59.108+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:47:59.131+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:47:59.131+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T09:47:59.160+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): download_data> on 2020-03-02 00:00:00+00:00
+[2025-01-30T09:47:59.176+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=896) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-30T09:47:59.178+0000] {standard_task_runner.py:72} INFO - Started process 900 to run task
+[2025-01-30T09:47:59.184+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'homework_workflow_ingest', 'download_data', 'scheduled__2020-03-02T00:00:00+00:00', '--job-id', '98', '--raw', '--subdir', 'DAGS_FOLDER/homework_dag.py', '--cfg-path', '/tmp/tmpqtg04jxx']
+[2025-01-30T09:47:59.186+0000] {standard_task_runner.py:105} INFO - Job 98: Subtask download_data
+[2025-01-30T09:47:59.246+0000] {task_command.py:467} INFO - Running <TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [running]> on host 710324c6e27a
+[2025-01-30T09:47:59.334+0000] {abstractoperator.py:783} ERROR - Exception rendering Jinja template for task 'download_data', field 'bash_command'. Template: 'curl -o {{ var.value.AIRFLOW_HOME }}/data/{{ params.trip_class }}_{{ ds[:7] }}_data.parquet https://d37ci6vzurychx.cloudfront.net/trip-data/{{ params.trip_class }}_tripdata_{{ ds[:7] }}.parquet'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 775, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 171, in render_template
+    return self._render(template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 730, in _render
+    return super()._render(template, context, dag=dag)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 127, in _render
+    return render_template_to_string(template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 301, in render_template_to_string
+    return render_template(template, cast(MutableMapping[str, Any], context), native=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 296, in render_template
+    return "".join(nodes)
+           ^^^^^^^^^^^^^^
+  File "<template>", line 15, in root
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/sandbox.py", line 327, in getattr
+    value = getattr(obj, attribute)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/context.py", line 126, in __getattr__
+    self.var = Variable.get(key, deserialize_json=self._deserialize_json)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py", line 145, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable AIRFLOW_HOME does not exist'
+[2025-01-30T09:47:59.337+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3115, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context, jinja_env=jinja_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3534, in render_templates
+    original_task.render_template_fields(context, jinja_env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 1438, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 775, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 171, in render_template
+    return self._render(template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 730, in _render
+    return super()._render(template, context, dag=dag)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 127, in _render
+    return render_template_to_string(template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 301, in render_template_to_string
+    return render_template(template, cast(MutableMapping[str, Any], context), native=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 296, in render_template
+    return "".join(nodes)
+           ^^^^^^^^^^^^^^
+  File "<template>", line 15, in root
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/sandbox.py", line 327, in getattr
+    value = getattr(obj, attribute)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/context.py", line 126, in __getattr__
+    self.var = Variable.get(key, deserialize_json=self._deserialize_json)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py", line 145, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable AIRFLOW_HOME does not exist'
+[2025-01-30T09:47:59.354+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=homework_workflow_ingest, task_id=download_data, run_id=scheduled__2020-03-02T00:00:00+00:00, execution_date=20200302T000000, start_date=20250130T094759, end_date=20250130T094759
+[2025-01-30T09:47:59.368+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T09:47:59.369+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 98 for task download_data ('Variable AIRFLOW_HOME does not exist'; 900)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3115, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context, jinja_env=jinja_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3534, in render_templates
+    original_task.render_template_fields(context, jinja_env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 1438, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 775, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 171, in render_template
+    return self._render(template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 730, in _render
+    return super()._render(template, context, dag=dag)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 127, in _render
+    return render_template_to_string(template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 301, in render_template_to_string
+    return render_template(template, cast(MutableMapping[str, Any], context), native=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 296, in render_template
+    return "".join(nodes)
+           ^^^^^^^^^^^^^^
+  File "<template>", line 15, in root
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/sandbox.py", line 327, in getattr
+    value = getattr(obj, attribute)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/context.py", line 126, in __getattr__
+    self.var = Variable.get(key, deserialize_json=self._deserialize_json)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py", line 145, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable AIRFLOW_HOME does not exist'
+[2025-01-30T09:47:59.396+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-30T09:47:59.430+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T09:47:59.434+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-30T09:58:46.857+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T09:58:47.339+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:58:47.395+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [queued]>
+[2025-01-30T09:58:47.396+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T09:58:48.434+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): download_data> on 2020-03-02 00:00:00+00:00
+[2025-01-30T09:58:48.451+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=260) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-30T09:58:48.452+0000] {standard_task_runner.py:72} INFO - Started process 264 to run task
+[2025-01-30T09:58:48.461+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'homework_workflow_ingest', 'download_data', 'scheduled__2020-03-02T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/homework_dag.py', '--cfg-path', '/tmp/tmps7g2g_x2']
+[2025-01-30T09:58:48.471+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask download_data
+[2025-01-30T09:58:50.515+0000] {task_command.py:467} INFO - Running <TaskInstance: homework_workflow_ingest.download_data scheduled__2020-03-02T00:00:00+00:00 [running]> on host 713eb9fcfb63
+[2025-01-30T09:58:53.458+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='homework_workflow_ingest' AIRFLOW_CTX_TASK_ID='download_data' AIRFLOW_CTX_EXECUTION_DATE='2020-03-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-03-02T00:00:00+00:00'
+[2025-01-30T09:58:53.467+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T09:58:53.558+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T09:58:53.571+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -o /opt/***/data/yellow_2020-03_data.parquet https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-03.parquet']
+[2025-01-30T09:58:53.719+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T09:58:54.513+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-01-30T09:58:54.514+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-01-30T09:58:57.395+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  3 42.3M    3 1533k    0     0  1132k      0  0:00:38  0:00:01  0:00:37 1132k 65 42.3M   65 27.5M    0     0  11.7M      0  0:00:03  0:00:02  0:00:01 11.7M100 42.3M  100 42.3M    0     0  14.7M      0  0:00:02  0:00:02 --:--:-- 14.7M
+[2025-01-30T09:58:57.399+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-30T09:59:00.910+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T09:59:00.928+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=homework_workflow_ingest, task_id=download_data, run_id=scheduled__2020-03-02T00:00:00+00:00, execution_date=20200302T000000, start_date=20250130T095847, end_date=20250130T095900
+[2025-01-30T09:59:01.363+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T09:59:01.454+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T09:59:01.829+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

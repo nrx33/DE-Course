@@ -1,0 +1,24 @@
+[2025-01-28T10:08:16.053+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T10:08:16.066+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_ingestion.get_data manual__2025-01-28T09:34:34.236621+00:00 [queued]>
+[2025-01-28T10:08:16.072+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_ingestion.get_data manual__2025-01-28T09:34:34.236621+00:00 [queued]>
+[2025-01-28T10:08:16.072+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-01-28T10:08:16.083+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): get_data> on 2025-01-28 09:34:34.236621+00:00
+[2025-01-28T10:08:16.091+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_data_ingestion', 'get_data', 'manual__2025-01-28T09:34:34.236621+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/dag_data_ingestion.py', '--cfg-path', '/tmp/tmp33xgi28t']
+[2025-01-28T10:08:16.093+0000] {standard_task_runner.py:105} INFO - Job 77: Subtask get_data
+[2025-01-28T10:08:16.094+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=400) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T10:08:16.095+0000] {standard_task_runner.py:72} INFO - Started process 401 to run task
+[2025-01-28T10:08:16.128+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_data_ingestion.get_data manual__2025-01-28T09:34:34.236621+00:00 [running]> on host a92704734cc8
+[2025-01-28T10:08:16.196+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_ingestion' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T09:34:34.236621+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T09:34:34.236621+00:00'
+[2025-01-28T10:08:16.197+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T10:08:16.208+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-28T10:08:16.209+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -o /opt/***/dags/data/yellow_data.parquet https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2022-01.parquet']
+[2025-01-28T10:08:16.219+0000] {subprocess.py:99} INFO - Output:
+[2025-01-28T10:08:16.228+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-01-28T10:08:16.228+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-01-28T10:08:18.382+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 12 36.3M   12 4798k    0     0  4455k      0  0:00:08  0:00:01  0:00:07 4455k 93 36.3M   93 34.1M    0     0  16.4M      0  0:00:02  0:00:02 --:--:-- 16.4M100 36.3M  100 36.3M    0     0  16.8M      0  0:00:02  0:00:02 --:--:-- 16.8M
+[2025-01-28T10:08:18.390+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-28T10:08:18.753+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T10:08:18.754+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_data_ingestion, task_id=get_data, run_id=manual__2025-01-28T09:34:34.236621+00:00, execution_date=20250128T093434, start_date=20250128T100816, end_date=20250128T100818
+[2025-01-28T10:08:18.794+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-28T10:08:18.813+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T10:08:18.815+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

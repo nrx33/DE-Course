@@ -1,0 +1,24 @@
+[2025-01-30T10:53:32.436+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T10:53:32.452+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: zone_to_gcp_dag.download_zone manual__2025-01-30T10:53:31.833865+00:00 [queued]>
+[2025-01-30T10:53:32.458+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: zone_to_gcp_dag.download_zone manual__2025-01-30T10:53:31.833865+00:00 [queued]>
+[2025-01-30T10:53:32.458+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T10:53:32.467+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): download_zone> on 2025-01-30 10:53:31.833865+00:00
+[2025-01-30T10:53:32.475+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'zone_to_gcp_dag', 'download_zone', 'manual__2025-01-30T10:53:31.833865+00:00', '--job-id', '184', '--raw', '--subdir', 'DAGS_FOLDER/homework_zones_dag.py', '--cfg-path', '/tmp/tmpcevhw68u']
+[2025-01-30T10:53:32.477+0000] {standard_task_runner.py:105} INFO - Job 184: Subtask download_zone
+[2025-01-30T10:53:32.478+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=615) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-30T10:53:32.478+0000] {standard_task_runner.py:72} INFO - Started process 616 to run task
+[2025-01-30T10:53:32.513+0000] {task_command.py:467} INFO - Running <TaskInstance: zone_to_gcp_dag.download_zone manual__2025-01-30T10:53:31.833865+00:00 [running]> on host 9573d401388f
+[2025-01-30T10:53:32.701+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='zone_to_gcp_dag' AIRFLOW_CTX_TASK_ID='download_zone' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T10:53:31.833865+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-30T10:53:31.833865+00:00'
+[2025-01-30T10:53:32.702+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T10:53:32.714+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T10:53:32.714+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -o /opt/***/data/zone_data.parquet https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv']
+[2025-01-30T10:53:32.724+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T10:53:32.807+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-01-30T10:53:32.808+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-01-30T10:53:33.518+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 12331  100 12331    0     0  17339      0 --:--:-- --:--:-- --:--:-- 17318
+[2025-01-30T10:53:33.522+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-30T10:53:33.544+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T10:53:33.544+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=zone_to_gcp_dag, task_id=download_zone, run_id=manual__2025-01-30T10:53:31.833865+00:00, execution_date=20250130T105331, start_date=20250130T105332, end_date=20250130T105333
+[2025-01-30T10:53:33.574+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T10:53:33.592+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T10:53:33.593+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

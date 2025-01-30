@@ -1,0 +1,22 @@
+[2025-01-28T13:37:57.163+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T13:37:57.177+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T13:33:26.522730+00:00 [queued]>
+[2025-01-28T13:37:57.184+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T13:33:26.522730+00:00 [queued]>
+[2025-01-28T13:37:57.184+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-01-28T13:37:57.196+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): ingest_data> on 2025-01-28 13:33:26.522730+00:00
+[2025-01-28T13:37:57.204+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_data_ingestion', 'ingest_data', 'manual__2025-01-28T13:33:26.522730+00:00', '--job-id', '117', '--raw', '--subdir', 'DAGS_FOLDER/local_ingestion_dag.py', '--cfg-path', '/tmp/tmp4vqnvwva']
+[2025-01-28T13:37:57.206+0000] {standard_task_runner.py:105} INFO - Job 117: Subtask ingest_data
+[2025-01-28T13:37:57.207+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=333) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T13:37:57.207+0000] {standard_task_runner.py:72} INFO - Started process 334 to run task
+[2025-01-28T13:37:57.242+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_data_ingestion.ingest_data manual__2025-01-28T13:33:26.522730+00:00 [running]> on host 7934eedddcc2
+[2025-01-28T13:37:57.320+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T13:33:26.522730+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T13:33:26.522730+00:00'
+[2025-01-28T13:37:57.320+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T13:37:57.336+0000] {logging_mixin.py:190} INFO - Table Name: trip_data
+[2025-01-28T13:37:57.337+0000] {logging_mixin.py:190} INFO - File Path (Parquet): /opt/***/data/green_2023-01_data.parquet
+[2025-01-28T13:37:57.337+0000] {logging_mixin.py:190} INFO - Execution Date: 2025-01-28 13:33:26.522730+00:00
+[2025-01-28T13:37:57.349+0000] {logging_mixin.py:190} INFO - Connection established successfully, inserting data...
+[2025-01-28T13:37:57.349+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-28T13:37:57.360+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T13:37:57.360+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_data_ingestion, task_id=ingest_data, run_id=manual__2025-01-28T13:33:26.522730+00:00, execution_date=20250128T133326, start_date=20250128T133757, end_date=20250128T133757
+[2025-01-28T13:37:57.381+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-28T13:37:57.397+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T13:37:57.398+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
